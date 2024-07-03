@@ -12,10 +12,40 @@ The Game of Life is played on an infinite two-dimensional orthogonal grid of squ
 - **Survival**: A live cell with two or three live neighbors stays alive.
 - **Birth**: A dead cell with exactly three live neighbors becomes a live cell.
 
-## Installation
+### Running the Game
 
-To run this project, you need to have Python and Pygame installed on your system. You can install Pygame using `pip install pygame`.
+1. **Installation**: Ensure Python 3.x is installed. Install Pygame using `pip install pygame`.
+2. **Run**: Execute `python game_of_life.py` to start the simulation.
+3. **Controls**: Use mouse clicks and keyboard shortcuts to interact with the simulation.
 
-## How to Run
+## Implementation Details
+
+### Pygame Setup
+
+- Initialize Pygame and define constants such as screen size (`WIDTH`, `HEIGHT`), cell size (`CELL_SIZE`), and frames per second (`FPS`).
+
+### Grid and Cell Handling
+
+- Use a set (`positions`) to represent live cells and functions to draw the grid (`draw_grid`) and get neighbors (`get_neigh`).
+
+### Game Logic
+
+- Implement rules for Conway's Game of Life in the `update_grid` function:
+  - Any live cell with fewer than two live neighbors dies (underpopulation).
+  - Any live cell with two or three live neighbors survives.
+  - Any live cell with more than three live neighbors dies (overpopulation).
+  - Any dead cell with exactly three live neighbors becomes alive (reproduction).
+
+### User Interaction
+
+- **Mouse Click**: Toggle cell state (alive or dead).
+- **Spacebar**: Start/Pause simulation.
+- **C(key)**: Clear the grid.
+- **G(key)**: Generate a random starting pattern.
+
+
+
+
+
 
 
